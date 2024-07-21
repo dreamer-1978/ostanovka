@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  body {
+    @apply bg-[#282828] border-[2px] border-[#7FFF00]
+  }
+  .buttons {
+    @apply grid grid-cols-3 gap-2 m-2
+  }
+  button {
+    @apply bg-blue-600 text-white px-2 py-1 rounded-lg shadow-lg shadow-blue-500/40 hover:shadow-indigo-500/40 border-[2px] border-red-600 text-center
+  }
+  .content {
+    @apply bg-blue-600 text-white px-6 py-2 m-6 rounded-lg text-2xl max-w-[400px] md:max-w-[600px] text-center overflow-auto
+  }
+  
+  a {
+    @apply text-white text-2xl ml-[4px]
+  }
+  li {
+    @apply border-b-[2px] border-red-500 p-2
+  }
+  span {
+    @apply text-red-600
+  }
+}
