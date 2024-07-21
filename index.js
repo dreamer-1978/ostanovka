@@ -13,6 +13,10 @@ const corsOption = {
 };
 
 app.get("/", cors(corsOption), async (req, res) => {
+  res.send("Server is Running")
+});
+
+app.get("/data", cors(corsOption), async (req, res) => {
   const stopping = req.query.stopping
 try {
 

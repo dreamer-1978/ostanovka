@@ -16,7 +16,7 @@ const ul = document.createElement('ul')
 async function fetchMail() {
   const stoppingMail = `https://yandex.ru/maps/213/moscow/stops/stop__9643717/?ll=37.826208%2C55.777070&tab=overview&z=16`;
   try {
-    const response = await axios.get("http://localhost:3000", {
+    const response = await axios.get("http://localhost:3000/data", {
       params: {
         stopping: stoppingMail
       }
@@ -34,7 +34,7 @@ async function fetchHighway() {
   const stoppingHighway =
     "https://yandex.ru/maps/213/moscow/stops/stop__9643755/?ll=37.842545%2C55.780370&tab=overview&z=16";
   try {
-    const response = await axios.get("http://localhost:3000", {
+    const response = await axios.get("http://localhost:3000/data", {
       params: {
         stopping: stoppingHighway,
       },
@@ -51,7 +51,7 @@ async function fetchChurch() {
    const stoppingChurch =
     "https://yandex.ru/maps/213/moscow/stops/stop__9646059/?ll=37.842783%2C55.769091&tab=overview&z=16.72";
   try {
-    const response = await axios.get("http://localhost:3000", {
+    const response = await axios.get("http://localhost:3000/data", {
       params: {
         stopping: stoppingChurch,
       },
