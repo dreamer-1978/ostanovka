@@ -6,8 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
-    "start": "concurrently \"npm run dev\" \"nodemon ./api/index.js\""
+    "preview": "vite preview"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.19",
@@ -20,7 +19,6 @@
     "cheerio": "^1.0.0-rc.12",
     "concurrently": "^8.2.2",
     "cors": "^2.8.5",
-    "express": "^4.19.2",
-    "nodemon": "^3.1.4"
+    "express": "^4.19.2"
   }
 }
