@@ -40,9 +40,9 @@ try {
 });
 
 app.get("/schedule", cors(corsOption), async (req, res) => {
-  const urlSchedule = "https://i-hram.ru/schedule/";
+  const stopping = req.query.stopping;
   try {
-    const response = await axios.get(urlSchedule);
+    const response = await axios.get(stopping);
     const data = response.data;
     const $ = cheerio.load(data);
     const div = $(".table.table-striped.table-schedule").html();
