@@ -39,6 +39,24 @@ try {
 }
 });
 
+app.get("/schedule", cors(corsOption), async (req, res) => {
+  const urlSchedule = "https://i-hram.ru/schedule/";
+  try {
+    const response = await axios.get(urlSchedule);
+    const data = response.data;
+    const $ = cheerio.load(data);
+    const div = $(".table.table-striped.table-schedule").html();
+    if (!div) {
+      res.send("Not found");
+    } else {
+      res.send(div);
+    }
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("An error occurred while fetching the data");
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
